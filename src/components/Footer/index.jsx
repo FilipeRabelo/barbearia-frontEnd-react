@@ -1,5 +1,6 @@
 import React from "react"
 import './styles.css'
+import { FooterStyle }  from './style';
 
 export function Footer(){
 
@@ -9,9 +10,9 @@ export function Footer(){
   const currentYear = new Date().getFullYear();
 
   return(
-    <footer className="footer">
+    <FooterStyle >
       <h3>Footer Barbearia</h3>
       <p>Todos os direitos reservados © | {currentYear}</p>
-    </footer>
+    </FooterStyle>
   )
 }

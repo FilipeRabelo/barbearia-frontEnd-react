@@ -5,21 +5,24 @@ import Servicos from "./pages/Servicos"
 import Atendimentos from "./pages/Atendimentos"
 import Page404 from "./pages/Page404"
 import Layout from "./components/Layout"
+import { GlobalStyles } from "./globalStyle"
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout/>}>    {/* para chamar o layout */}
+      <GlobalStyles/>  {/* RESET CSS GLOBAL */}
 
-          <Route index element={<Home />} />
-          <Route path="/barbeiros" element={<Barbeiros />} />
-          <Route path="/servicos" element={<Servicos />} />
-          <Route path="/atendimentos" element={<Atendimentos />} />
-          <Route path="*" element={<Page404 />} />
+        <Routes>
+          <Route path="/" element={<Layout />}>    {/* para chamar o layout */}
 
-        </Route>     
-      </Routes>
+            <Route index element={<Home />} />
+            <Route path="/barbeiros" element={<Barbeiros />} />
+            <Route path="/servicos" element={<Servicos />} />
+            <Route path="/atendimentos" element={<Atendimentos />} />
+            <Route path="*" element={<Page404 />} />
+
+          </Route>
+        </Routes>
     </BrowserRouter>
   )
 }

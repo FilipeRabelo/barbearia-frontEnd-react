@@ -1,21 +1,25 @@
-import { Link } from 'react-router-dom'
-import './styles.css'
+import { Link } from 'react-router-dom';
+import { Logo, HeaderStyle, Ul, LinkStyled } from './style';
+
 
 export function Header() {
   return (
-    <header className='header'>
+    <HeaderStyle>
       <Link to={'/'}>
-        <img className="logo" src="/logo.png" alt="" />
+        <Logo
+          src="/logo3.png"
+          alt="logo barbearia"
+        />
       </Link>
 
-      <nav className='nav'>
-        <ul className='ul-links'>
-          <li><Link to={'/'}>Home</Link></li>
-          <li><Link to={'/barbeiros'}>Barbeiros</Link></li>
-          <li><Link to={'/servicos'}>Servicos</Link></li>
-          <li><Link to={'/atendimentos'}>Atendimentos</Link></li>
-        </ul>
+      <nav>
+        <Ul>
+          <li><LinkStyled to={'/'}>Home</LinkStyled></li>
+          <li><LinkStyled to={'/barbeiros'}>Barbeiros</LinkStyled></li>
+          <li><LinkStyled to={'/servicos'}>Servicos</LinkStyled></li>
+          <li><LinkStyled to={'/atendimentos'}>Atendimentos</LinkStyled></li>
+        </Ul>
       </nav>
-    </header>
+    </HeaderStyle>
   )
 }
