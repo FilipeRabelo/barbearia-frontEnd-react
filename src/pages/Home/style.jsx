@@ -13,5 +13,4 @@ export const Div = styled.div`
   text-align: center;
   align-items: center;
   padding-right: 25px;
-  margin-top: 16px;
 `

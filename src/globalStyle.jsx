@@ -64,7 +64,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: white; /* Cor de fundo da barra */
   }
 
-  `;
+  /* body{
+    height: 100vh;
+  } */
+
+`;
 
 export const SubtituloCard = styled.h2`
   font-family: "Josefin Sans", serif;
