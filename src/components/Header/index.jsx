@@ -7,7 +7,7 @@ export function Header() {
     <HeaderStyle>
       <Link to={'/'}>
         <Logo
-          src="/logo3.png"
+          src="/src/assets/logo3.png"
           alt="logo barbearia"
         />
       </Link>

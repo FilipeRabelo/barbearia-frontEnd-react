@@ -1,4 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { cores } from "./utils/cores";
+import { Link } from "react-router-dom";
 
 // RESET GLOBAL
 export const GlobalStyles = createGlobalStyle`
@@ -21,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    /* overflow-x: hidden; */
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
@@ -45,4 +48,50 @@ export const GlobalStyles = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+
+  ::-webkit-scrollbar {
+    width: 10px; /* Largura da barra vertical */
+    height: 0; /* Altura da barra horizontal */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #101026; /* Cor da barra */
+    border-radius: 2px; /* Para deixar as bordas arredondadas */
+    width: 20px;  
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: white; /* Cor de fundo da barra */
+  }
+
+  `;
+
+export const SubtituloCard = styled.h2`
+  font-family: "Josefin Sans", serif;
+  color: ${cores.marromEscuro};
+  font-size: 2rem;
+  padding:20px 20px 5px;
+  font-weight: 600;
 `;
+
+export const SubtituloH3Card = styled.h3`
+  color: ${cores.marromClaro};
+`;
+
+export const SpanCard = styled.span`
+  color: ${cores.branco};
+`;
+
+export const Links = styled(Link)`
+  color: ${cores.marromClaro};
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-family: "Josefin Sans", serif;
+  font-weight: bold;
+  align-items: center;
+  margin-bottom: -19px;
+  border: 1px solid ${cores.pretoAzulado};
+  padding: 7px;
+  border-radius: 10px;
+  background-color: ${cores.pretoAzulado};
+`

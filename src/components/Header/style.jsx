@@ -1,17 +1,21 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { cores } from "../../utils/cores";
 
 
 export const Logo = styled.img`
   max-width: 80px;
+  padding: 0.5rem 0;
+  /* max-height: 60px; */
 `;
 
 export const HeaderStyle = styled.header`
-  background-color: #2f4f4f;
+  /* background-color: ${cores.verdeElegante} */
+  background-color: ${cores.pretoAzulado};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 0.5rem;
 `
 
 export const Ul = styled.ul`
@@ -20,7 +24,7 @@ export const Ul = styled.ul`
   justify-content: center;
   gap: 20px;
   list-style: none;
-  padding-right: 10px;
+  padding-right: 20px;
 `;
 
 // TAG LINK
