@@ -1,4 +1,5 @@
-export const barbeiros_falsos = [
+export const barbeiros_falsos = 
+[
   {
     id: 1,
     nome: "João Silva",

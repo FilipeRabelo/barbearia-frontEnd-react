@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.70rem;
   padding: 0 20px;
 `

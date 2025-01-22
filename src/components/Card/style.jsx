@@ -10,5 +10,4 @@ export const DivStyle = styled.div`
   padding: 15px;
   color: ${cores.branco};
   border-radius: 10px;
-  /* margin-bottom: 15px; */
 `;

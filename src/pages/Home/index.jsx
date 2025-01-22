@@ -1,12 +1,44 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import { barbeiros_falsos } from "../../mocks/barbeiros";
+// import { servicos_falsos } from "../../mocks/servicos";
+// import { atendimentos_falsos } from "../../mocks/atendimentos";
 import { Card } from "../../components/Card";
 import { Links, SpanCard, SubtituloCard, SubtituloH3Card } from "../../globalStyle";
-import { atendimentos_falsos } from "../../mocks/atendimentos";
-import { barbeiros_falsos } from "../../mocks/barbeiros";
-import { servicos_falsos } from "../../mocks/servicos";
 import { Div, Section } from "./style";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
+
+  const [listaBarbeiros, setListaBarbeiros] = useState();
+  const [listaServicos, setListaServicos] = useState();
+  const [listaAtendimentos, setListaAtendimentos] = useState();
+
+  // consultar a api -  usar função assíncrona
+  async function buscarBarbeiros(){
+    const response = await axios.get('http://127.0.0.1:5000/barbeiros');
+    const retorno = await response.data;   // data vem do axios
+    setListaBarbeiros(retorno);
+  }
+
+  async function buscarServicos(){
+    const response = await axios.get('http://127.0.0.1:5000/servicos');
+    const retorno = await response.data;
+    setListaServicos(retorno);
+  };
+
+  async function buscarAtendimentos() {
+    const response = await axios.get('http://127.0.0.1:5000/atendimentos');
+    const retorno = await response.data;
+    setListaAtendimentos(retorno);
+  }
+
+  useEffect(() => {
+    buscarBarbeiros();
+    buscarServicos();
+    buscarAtendimentos();
+  }, []);
+
   return (
     <>
       <Div>
@@ -14,8 +46,8 @@ export default function Home() {
         <Links to={'/barbeiros'}>Ver Barbeiros</Links>
       </Div>
       <Section>
-        {barbeiros_falsos && barbeiros_falsos.map((barbeiro) => (
-          <Card>
+        {listaBarbeiros && listaBarbeiros.map((barbeiro) => (
+          <Card key={barbeiro.id}>
             <SubtituloH3Card>
               Nome: <SpanCard>{barbeiro.nome}</SpanCard>
             </SubtituloH3Card>
@@ -37,8 +69,8 @@ export default function Home() {
         <Links to={'/servicos'}>Ver Serviços</Links>
       </Div>
       <Section>
-        {servicos_falsos && servicos_falsos.map((servico) => (
-          <Card>
+        {listaServicos && listaServicos.map((servico) => (
+          <Card key={servico.id}>
             <SubtituloH3Card>
               Nome: <SpanCard>{servico.nome}</SpanCard>
             </SubtituloH3Card>
@@ -64,18 +96,18 @@ export default function Home() {
         <Links to={'/atendimentos'}>Ver Atendimentos</Links>
       </Div>
       <Section>
-        {atendimentos_falsos && atendimentos_falsos.map((atendimento) => (
-          <Card>
+        {listaAtendimentos && listaAtendimentos.map((atendimento) => (
+          <Card key={atendimento.id}>
             <SubtituloH3Card>
-              Data atendimento: <SpanCard>{atendimento.dataHora}</SpanCard>
+              Data atendimento: <SpanCard>{atendimento.data_atendimento}</SpanCard>
             </SubtituloH3Card>
 
             <SubtituloH3Card>
-              Barbeiro: <SpanCard>{atendimento.barbeiro}</SpanCard>
+              Barbeiro: <SpanCard>{atendimento.id_barbeiro}</SpanCard>
             </SubtituloH3Card>
 
             <SubtituloH3Card>
-              Serviço: <SpanCard>{atendimento.servico}</SpanCard>
+              Serviço: <SpanCard>{atendimento.id_servico}</SpanCard>
             </SubtituloH3Card>
           </Card>
         )).slice(0, 5)}

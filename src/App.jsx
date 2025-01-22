@@ -6,6 +6,7 @@ import Atendimentos from "./pages/Atendimentos"
 import Page404 from "./pages/Page404"
 import Layout from "./components/Layout"
 import { GlobalStyles } from "./globalStyle"
+import AdicionarBarbeiro from "./pages/AdicionarBarbeiro"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
 
             <Route index element={<Home />} />
             <Route path="/barbeiros" element={<Barbeiros />} />
+            <Route path="/adicionarBarbeiro" element={<AdicionarBarbeiro />} />
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/atendimentos" element={<Atendimentos />} />
             <Route path="*" element={<Page404 />} />
