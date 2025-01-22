@@ -1,9 +1,6 @@
+import { Button, ContainerForm, GroupForm, Input, Label, Titulo } from './style';
 import { useState } from "react";
-import { SubtituloCard } from "../../globalStyle";
 import axios from "axios";
-
-import { Button, ContainerForm, GroupForm, Input, Label } from './style'
-
 
 export default function AdicionarBarbeiro() {
 
@@ -14,7 +11,7 @@ export default function AdicionarBarbeiro() {
   async function cadastrarBarbeiro(event) {
     event.preventDefault();
 
-    const novo_barbeiro = {
+    const novo_barbeiro = {     // objeto para ser enviado
       nome: nome,
       cpf: cpf,
       telefone: telefone
@@ -29,9 +26,9 @@ export default function AdicionarBarbeiro() {
 
   return (
     <>
-      <SubtituloCard>Adicionar novo barbeiro</SubtituloCard>
+      <Titulo>Adicionar novo barbeiro</Titulo>
 
-      <ContainerForm action="" onSubmit={cadastrarBarbeiro} className="form-container">
+      <ContainerForm action="" onSubmit={cadastrarBarbeiro}>
         <GroupForm>
           <Label htmlFor="nome">Nome:</Label>
           <Input

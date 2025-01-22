@@ -6,6 +6,10 @@ export const Section = styled.section`
   gap: 0.70rem;
   padding: 0 20px;
 `
+export const DivContent = styled.div`
+  margin: 2rem auto;
+  
+`
 
 export const Div = styled.div`
   display: flex;

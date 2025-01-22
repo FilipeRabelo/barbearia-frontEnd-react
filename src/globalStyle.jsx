@@ -99,3 +99,25 @@ export const Links = styled(Link)`
   border-radius: 10px;
   background-color: ${cores.pretoAzulado};
 `
+
+export const BotaoAdd = styled(Link)`
+  border: 1pix solid ${cores.pretoAzulado};
+  text-decoration: none;
+  text-align: center;
+  padding: 11px;
+  background-color: ${cores.marromEscuro};
+  color: ${cores.branco};
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Josefin Sans", serif;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: all 0.6s;
+
+  &:hover{
+    background-color: #FFF;
+    color: #000;
+    transform: scale(1.05);
+  }
+`

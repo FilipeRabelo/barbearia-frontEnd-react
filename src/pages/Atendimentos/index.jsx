@@ -1,8 +1,8 @@
 // import { atendimentos_falsos } from "../../mocks/atendimentos";
 import { useEffect, useState } from "react";
 import { Card } from "../../components/Card";
-import { SpanCard, SubtituloCard, SubtituloH3Card } from "../../globalStyle";
-import { Section } from "./style";
+import { BotaoAdd, SpanCard, SubtituloCard, SubtituloH3Card } from "../../globalStyle";
+import { Div, Section } from "./style";
 import axios from "axios";
 
 export default function Atendimentos() {
@@ -21,7 +21,13 @@ export default function Atendimentos() {
 
   return (
     <>
-      <SubtituloCard>Atendimentos Realizados</SubtituloCard>
+      <Div>
+        <SubtituloCard>Atendimentos Realizados</SubtituloCard>
+        <BotaoAdd to={'/adicionarAtendimentos'}>
+          <p>Adicionar Atendimentos</p>
+        </BotaoAdd>
+      </Div>
+
       <Section>
         {listaAtendimentos && listaAtendimentos.map((atendimento) => (
           <Card key={atendimento.id}>

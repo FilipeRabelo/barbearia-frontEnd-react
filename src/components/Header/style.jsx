@@ -6,7 +6,6 @@ import { cores } from "../../utils/cores";
 export const Logo = styled.img`
   max-width: 80px;
   padding: 0.5rem 0;
-  /* max-height: 60px; */
 `;
 
 export const HeaderStyle = styled.header`
@@ -29,7 +28,7 @@ export const Ul = styled.ul`
 
 // TAG LINK
 export const LinkStyled = styled(Link)`
-  color: #d2b48c;
+  color: ${cores.marromClaro};
   text-decoration: none;
   font-size: 1.1rem;
   font-family: "Josefin Sans", serif;
