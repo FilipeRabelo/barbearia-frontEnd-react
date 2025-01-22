@@ -1,5 +1,5 @@
 import React from "react"
-import { FooterStyle }  from './style';
+import { FooterStyle, DivFooter }  from './style';
 
 export function Footer(){
 
@@ -10,8 +10,10 @@ export function Footer(){
 
   return(
     <FooterStyle >
-      <h3>Footer Barbearia</h3>
-      <p>Todos os direitos reservados © | {currentYear}</p>
+      <DivFooter>
+        <h3>Footer Barbearia</h3>
+        <p>Todos os direitos reservados © | {currentYear}</p>
+      </DivFooter>
     </FooterStyle>
   )
 }

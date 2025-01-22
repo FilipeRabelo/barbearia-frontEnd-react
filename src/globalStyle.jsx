@@ -17,37 +17,54 @@ export const GlobalStyles = createGlobalStyle`
   figure, figcaption, footer, header, hgroup, 
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video {
+    /* overflow-x: hidden; */
+    /* height: 100%; */
+    /* display: flex; */
+    /* flex-direction: column; */
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    /* overflow-x: hidden; */
   }
+
+  #root {
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; /*Força o layout flexível*/
+  }
+
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
+
   body {
     line-height: 1;
+    background-color: #ccc;
   }
+
   ol, ul {
     list-style: none;
   }
+
   blockquote, q {
     quotes: none;
   }
+
   blockquote:before, blockquote:after,
   q:before, q:after {
     content: '';
     content: none;
   }
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
   }
+
 
   ::-webkit-scrollbar {
     width: 10px; /* Largura da barra vertical */
@@ -63,17 +80,12 @@ export const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar-track {
     background-color: white; /* Cor de fundo da barra */
   }
-
-  /* body{
-    height: 100vh;
-  } */
-
 `;
 
 export const SubtituloCard = styled.h2`
   font-family: "Josefin Sans", serif;
   color: ${cores.marromEscuro};
-  font-size: 2rem;
+  font-size: 1.9rem;
   padding:20px 20px 5px;
   font-weight: 600;
 `;
@@ -104,11 +116,11 @@ export const BotaoAdd = styled(Link)`
   border: 1pix solid ${cores.pretoAzulado};
   text-decoration: none;
   text-align: center;
-  padding: 11px;
+  padding: 9px;
   background-color: ${cores.marromEscuro};
   color: ${cores.branco};
-  border-radius: 10px;
-  font-size: 1rem;
+  border-radius: 7px;
+  font-size: 0.7rem;
   font-family: "Josefin Sans", serif;
   font-weight: bold;
   cursor: pointer;
@@ -116,8 +128,10 @@ export const BotaoAdd = styled(Link)`
   transition: all 0.6s;
 
   &:hover{
-    background-color: #FFF;
+    background-color: #ccc;
     color: #000;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
   }
 `
+
+/* overflow-x: hidden; */

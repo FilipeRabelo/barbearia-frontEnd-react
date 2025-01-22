@@ -1,11 +1,15 @@
-import styled from "styled-components"
-import { cores } from "../../utils/cores"
+import styled from "styled-components";
+import { cores } from "../../utils/cores";
+
+export const DivContainer = styled.div`
+  height: 100vh;
+`;
 
 export const Titulo = styled.h2`
   font-family: "Josefin Sans", serif;
   color: ${cores.marromEscuro};
-  font-size: 2rem;
-  padding:20px 20px 5px;
+  font-size: 1.6rem;
+  /* padding: 10px 0; */
   font-weight: 600;
   text-align: center;
 `
@@ -19,10 +23,11 @@ export const ContainerForm = styled.form`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   font-family: Arial, sans - serif;
-`
+`;
+
 export const GroupForm = styled.form`
   margin-bottom: 15px;
-`
+`;
 
 export const Label = styled.label`
   display: block;

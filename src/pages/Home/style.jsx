@@ -5,9 +5,18 @@ export const Section = styled.section`
   grid-template-columns: repeat(5, 1fr);
   gap: 0.70rem;
   padding: 0 20px;
+
+  /* Media query para celular */
+  @media(max-width: 768px) {
+    /* display: grid; */
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+  }
 `
 export const DivContent = styled.div`
-  margin: 2rem auto;
+  margin-bottom: 2rem;  
+`
+
+export const DivContainer = styled.div`
   
 `
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../components/Card";
 import { BotaoAdd, SpanCard, SubtituloCard, SubtituloH3Card } from "../../globalStyle";
-import { Section, SectionLink, BotaoAddBarbeiro, Div } from "./style";
+import { Section, SectionLink, BotaoAddBarbeiro, Div, DivContainer } from "./style";
 // import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -20,7 +20,7 @@ export default function Barbeiros() {
   }, [])
 
   return (
-    <>
+    <DivContainer>
       <Div>
         <SubtituloCard>Barbeiros</SubtituloCard>
         <BotaoAdd to={'/adicionarBarbeiro'}>
@@ -45,6 +45,6 @@ export default function Barbeiros() {
           </Card>
         ))}
       </Section>
-    </>
+    </DivContainer>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, ContainerForm, GroupForm, Input, Label, Titulo } from './style';
+import { Button, ContainerForm, DivContainer, GroupForm, Input, Label, Titulo } from './style';
 import axios from 'axios';
 
 export default function AdicionarServico() {
@@ -23,7 +23,7 @@ export default function AdicionarServico() {
   }
 
   return (
-    <>
+    <DivContainer>
       <Titulo>Adicionar novo servico</Titulo>
 
       <ContainerForm action="" onSubmit={cadastrarServico}>
@@ -74,6 +74,6 @@ export default function AdicionarServico() {
 
         <Button className="form-button">Enviar</Button>
       </ContainerForm>
-    </>
+    </DivContainer>
   )
 }

@@ -4,7 +4,7 @@
 // import { atendimentos_falsos } from "../../mocks/atendimentos";
 import { Card } from "../../components/Card";
 import { BotaoAdd, Links, SpanCard, SubtituloCard, SubtituloH3Card } from "../../globalStyle";
-import { Div, DivContent, Section } from "./style";
+import { Div, DivContainer, DivContent, Section } from "./style";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <DivContainer>
       <DivContent>
         <Div>
           <SubtituloCard>Barbeiros</SubtituloCard>
@@ -126,6 +126,6 @@ export default function Home() {
         </Section>
       </DivContent >
 
-    </>
+    </DivContainer>
   )
 }

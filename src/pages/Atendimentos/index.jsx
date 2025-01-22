@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Card } from "../../components/Card";
 import { BotaoAdd, SpanCard, SubtituloCard, SubtituloH3Card } from "../../globalStyle";
-import { Div, Section } from "./style";
+import { Div, DivContainer, Section } from "./style";
 import axios from "axios";
 
 export default function Atendimentos() {
@@ -20,7 +20,7 @@ export default function Atendimentos() {
   }, [])
 
   return (
-    <>
+    <DivContainer>
       <Div>
         <SubtituloCard>Atendimentos Realizados</SubtituloCard>
         <BotaoAdd to={'/adicionarAtendimentos'}>
@@ -45,6 +45,6 @@ export default function Atendimentos() {
           </Card>
         ))}
       </Section>
-    </>
+    </DivContainer>
   )
 }
